@@ -59,7 +59,7 @@ class EvaluationStrategy:
         self._data_validation_bin = None
         self._data_test_bin = None
         
-        self.check_data_indices()
+        #self.check_data_indices()
         
         #Useful attributes  
         self.data_nrows = int(np.max(self.data[:,0])) + 1

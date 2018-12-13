@@ -6,3 +6,4 @@ from .pmf import *
 from .ibpr import *
 from .skm import *
 from .vbpr import *
+from .autorec import *
