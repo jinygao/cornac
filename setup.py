@@ -49,7 +49,7 @@ elif os.name == 'posix':
 
 setuptools.setup(
     name="cornac",
-    version="0.1.0",
+    version="0.1.0a",
     author="Aghiles Salah",
     author_email="asalah@smu.edu.sg",
     description="A collection of recommendation algorithms and comparisons",
