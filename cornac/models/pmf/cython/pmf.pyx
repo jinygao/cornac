@@ -47,6 +47,7 @@ def pmf_linear(X,n_X,d_X,k, n_epochs = 100, lamda = 0.001,learning_rate=0.001,ga
   
     #Optimization
     
+    print("update user factors only")
     for epoch in range(n_epochs):
         for u_, i_, val in X:
             u_, i_ = int(u_), int(i_)
@@ -54,7 +55,7 @@ def pmf_linear(X,n_X,d_X,k, n_epochs = 100, lamda = 0.001,learning_rate=0.001,ga
             #update user factors
             grad_u[u_,:] = e * V[i_,:]- lamda * U[u_, :]
             cache_u[u_,:] = gamma * cache_u[u_,:] + (1 - gamma) * (grad_u[u_,:]*grad_u[u_,:])
-            U[u_,:] += learning_rate * (grad_u[u_,:]/(np.sqrt(cache_u[u_,:])+eps) ) # Update the user factor, this update  in not exactly faire need to reweight the L2 regularization terms acoording the number of ratings per-user 
+            U[u_,:] += learning_rate * (grad_u[u_,:]/(np.sqrt(cache_u[u_,:])+eps) ) # Update the user factor, this update  in not exactly faire need to reweight the L2 regularization terms acoording the number of ratings per-user
             #update item factors
             #grad_v[i_,:] = e * U[u_,:] - lamda * V[i_, :]
             #cache_v[i_,:] = gamma * cache_v[i_,:] + (1 - gamma) * (grad_v[i_,:]*grad_v[i_,:])
@@ -63,7 +64,9 @@ def pmf_linear(X,n_X,d_X,k, n_epochs = 100, lamda = 0.001,learning_rate=0.001,ga
         print("loss:",loss[epoch])
     print("loss:",loss[epoch])
     res = {'U':U,'V':V,'loss': loss}
-    
+
+    print(trained U", U[0,:])
+    print("same V",V[0,:])
     return res
 
 
