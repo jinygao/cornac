@@ -65,7 +65,7 @@ def pmf_linear(X,n_X,d_X,k, n_epochs = 100, lamda = 0.001,learning_rate=0.001,ga
     print("loss:",loss[epoch])
     res = {'U':U,'V':V,'loss': loss}
 
-    print(trained U", U[0,:])
+    print("trained U", U[0,:])
     print("same V",V[0,:])
     return res
 
