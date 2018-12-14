@@ -1228,6 +1228,7 @@ static const char __pyx_k_epoch_i_loss_f[] = "epoch %i, loss: %f";
 static const char __pyx_k_pmf_non_linear[] = "pmf_non_linear";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_author_Aghiles_Salah[] = "\n@author: Aghiles Salah\n";
+static const char __pyx_k_update_user_factors_only[] = "update user factors only";
 static const char __pyx_k_cornac_models_pmf_cython_pmf_pyx[] = "cornac\\models\\pmf\\cython\\pmf.pyx";
 static PyObject *__pyx_n_s_T;
 static PyObject *__pyx_n_s_U;
@@ -1283,6 +1284,7 @@ static PyObject *__pyx_n_s_sqrt;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_kp_s_trained_U;
 static PyObject *__pyx_n_s_u;
+static PyObject *__pyx_kp_s_update_user_factors_only;
 static PyObject *__pyx_n_s_val;
 static PyObject *__pyx_n_s_we;
 static PyObject *__pyx_n_s_zeros;
@@ -3823,9 +3825,18 @@ static PyObject *__pyx_pf_3pmf_2pmf_non_linear(CYTHON_UNUSED PyObject *__pyx_sel
   }
   __pyx_L4:;
 
+  /* "pmf.pyx":148
+ *     #Optimization
+ * 
+ *     print("update user factors only")             # <<<<<<<<<<<<<<
+ *     for epoch in range(n_epochs):
+ *         for u_, i_, val in X:
+ */
+  if (__Pyx_PrintOne(0, __pyx_kp_s_update_user_factors_only) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
+
   /* "pmf.pyx":149
  * 
- *     #print("update user factors only")
+ *     print("update user factors only")
  *     for epoch in range(n_epochs):             # <<<<<<<<<<<<<<
  *         for u_, i_, val in X:
  *             u_, i_ = int(u_), int(i_)
@@ -3876,7 +3887,7 @@ static PyObject *__pyx_pf_3pmf_2pmf_non_linear(CYTHON_UNUSED PyObject *__pyx_sel
     __pyx_t_1 = 0;
 
     /* "pmf.pyx":150
- *     #print("update user factors only")
+ *     print("update user factors only")
  *     for epoch in range(n_epochs):
  *         for u_, i_, val in X:             # <<<<<<<<<<<<<<
  *             u_, i_ = int(u_), int(i_)
@@ -4515,7 +4526,7 @@ static PyObject *__pyx_pf_3pmf_2pmf_non_linear(CYTHON_UNUSED PyObject *__pyx_sel
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
       /* "pmf.pyx":150
- *     #print("update user factors only")
+ *     print("update user factors only")
  *     for epoch in range(n_epochs):
  *         for u_, i_, val in X:             # <<<<<<<<<<<<<<
  *             u_, i_ = int(u_), int(i_)
@@ -4549,7 +4560,7 @@ static PyObject *__pyx_pf_3pmf_2pmf_non_linear(CYTHON_UNUSED PyObject *__pyx_sel
 
     /* "pmf.pyx":149
  * 
- *     #print("update user factors only")
+ *     print("update user factors only")
  *     for epoch in range(n_epochs):             # <<<<<<<<<<<<<<
  *         for u_, i_, val in X:
  *             u_, i_ = int(u_), int(i_)
@@ -4730,6 +4741,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_kp_s_trained_U, __pyx_k_trained_U, sizeof(__pyx_k_trained_U), 0, 0, 1, 0},
   {&__pyx_n_s_u, __pyx_k_u, sizeof(__pyx_k_u), 0, 0, 1, 1},
+  {&__pyx_kp_s_update_user_factors_only, __pyx_k_update_user_factors_only, sizeof(__pyx_k_update_user_factors_only), 0, 0, 1, 0},
   {&__pyx_n_s_val, __pyx_k_val, sizeof(__pyx_k_val), 0, 0, 1, 1},
   {&__pyx_n_s_we, __pyx_k_we, sizeof(__pyx_k_we), 0, 0, 1, 1},
   {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},

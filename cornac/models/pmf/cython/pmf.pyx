@@ -145,7 +145,7 @@ def pmf_non_linear(X,n_X,d_X,k, n_epochs = 100, lamda = 0.001,learning_rate=0.00
   
     #Optimization
     
-    #print("update user factors only")
+    print("update user factors only")
     for epoch in range(n_epochs):
         for u_, i_, val in X:
             u_, i_ = int(u_), int(i_)
